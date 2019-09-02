@@ -1,0 +1,103 @@
+
+\documentclass[aps,prl,preprint,groupedaddress]{revtex4-1}
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb}
+\usepackage{color}
+\newcommand{\mv}{\mathbf{m}}
+\newcommand{\tv}{\mathbf{t}}
+\newcommand{\thv}{\boldsymbol{\theta}}
+\newcommand{\qv}{\mathbf{q}}
+\newcommand{\Av}{\mathbf{A}}
+\newcommand{\Tv}{\mathbf{T}}
+\newcommand{\sv}{\mathbf{s}}
+\newcommand{\Sv}{\mathbf{S}}
+\newcommand{\pv}{\mathbf{p}}
+\newcommand{\Fv}{\mathbf{F}}
+\newcommand{\fv}{\mathbf{f}}
+\newcommand{\cv}{\mathbf{c}}
+\newcommand{\dv}{\mathbf{d}}
+\newcommand{\Dv}{\mathbf{D}}
+\newcommand{\xv}{\mathbf{x}}
+\newcommand{\yv}{\mathbf{y}}
+\newcommand{\qvt}{\tilde{\mathbf{q}}}
+\newcommand{\Exp}{\rm{\mathbf{E}}}
+\begin{document}
+
+% Use the \preprint command to place your local institutional report
+% number in the upper righthand corner of the title page in preprint mode.
+% Multiple \preprint commands are allowed.
+% Use the 'preprintnumbers' class option to override journal defaults
+% to display numbers if necessary
+%\preprint{}
+
+%Title of paper
+% \title{Optimal Allocation of Single-Cell Measurements for the HOG-MAPK Pathway in S. Cerevisae}
+\title{Fisher information analysis for first passage time distributions of stochastic biochemical reaction networks}
+
+% repeat the \author .. \affiliation  etc. as needed
+% \email, \thanks, \homepage, \altaffiliation all apply to the current
+% author. Explanatory text should go in the []'s, actual e-mail
+% address or url should go in the {}'s for \email and \homepage.
+% Please use the appropriate macro foreach each type of information
+
+% \affiliation command applies to all authors since the last
+% \affiliation command. The \affiliation command should follow the
+% other information
+% \affiliation can be followed by \email, \homepage, \thanks as well.
+\author{Zachary R Fox}
+% \author{Gregor Neuert}
+% \author{Brian Munsky}
+%\email[]{Your e-mail address}
+%\homepage[]{Your web page}
+%\thanks{}
+%\altaffiliation{}
+\affiliation{}
+
+%Collaboration name if desired (requires use of superscriptaddress
+%option in \documentclass). \noaffiliation is required (may also be
+%used with the \author command).
+%\collaboration can be followed by \email, \homepage, \thanks as well.
+%\collaboration{}
+%\noaffiliation
+
+\date{\today}
+
+\begin{abstract}
+% insert abstract here
+\end{abstract}
+
+% insert suggested PACS numbers in braces on next line
+\pacs{}
+% insert suggested keywords - APS authors don't need to do this
+%\keywords{}
+
+%\maketitle must follow title, authors, abstract, \pacs, and \keywords
+\maketitle
+
+First passage time dynamics are useful for studying when an event can be expected to happen. In biochemical reaction networks, they have been analyzed in a variety of contexts \cite{Ghusinga,Munsky,Paullson} to understand not just when biochemical events are likeliy to happen but with what variability one can expect. In this study, we develop a form of the Fisher information matrix to understand how sensitive the first passage time may be to different relevant quantities for bichemical systems, such as thresholds of molecule counts \cite{Ghusinga,Paullson}, biochemical reaction rates (i.e. protein decay rates), and more.
+
+% \subsection{In}
+The chemical master equation \cite{xxx} is the workhorse of stochastic biochemical reaction networks, with bleh blah blehh blah.
+This set of ODE's can be compactly written as $\frac{d \pv}{dt} = \Av \pv$. The finite state projection approach truncates this infinite set of ODE's into a finite subset which, when $\Av$ is not time-varying, leads to the creation of a set of ODEs which has the solution
+\begin{equation}
+  \pv(x,t;\thv) = \exp(\Av(\thv) t)\pv_0.
+\end{equation}
+Using the FSP, one can easily find a first-passage time distribution by noting that the exit of probability from the state space into the FSP sink $g(t)$ is simply $\frac{dg}{dt} = -\mathbf{1} {\Av_{JJ}} \pv(t)$.
+Therefore, the equation $g(t)$ is the cumulative density of the first passage time distribution,
+\begin{align}
+    F(t) = 1 - \mathbf{1}^{\rm{\Tv}} \exp (\Av_{JJ}t) \pv_0
+\end{align}
+and the first passage time distribution is $ f(t) = \frac{\partial F(t)}{\partial{t}}$,
+\begin{align}
+    f(t) = -\mathbf{1}^{\rm{\Tv}} \Av_{JJ} \exp(\Av_{JJ}t) \pv_0.
+\end{align}
+The moments of this distribution are
+\begin{align}
+    \Exp [t^n] = (-1)^n n! \mathbf{1}^{\rm \Tv} \Av_{JJ}^{-n} \pv_0.
+\end{align}
+The Fisher information matrix has recently been used to analyze stochastic biochemical reaction dynamics \cite{xxx} in terms of model and parameter identifiability and experiment design. So far, these approaches rely on measuring molecular species over time, and using directly the molecular abundances or their moments to construct the FIM,
+\begin{align}
+  \mathcal{I} = xx
+\end{align}
+While previous
+\end{document}
