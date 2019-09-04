@@ -110,5 +110,24 @@ We start by considering a simple process of exponential decay of a molecule $\ma
 \begin{align}
   \mathcal{X}\xrightarrow{\gamma} \varnothing
 \end{align}
-to a threshold $K$, as shown in Fig.\ \ref{fig1}
+to a threshold $K$, as shown in Fig.\ \ref{fig1}. The infinitesimal generator for this is given by
+\begin{align}
+  A_{ji} = \begin{cases}
+            \gamma i  \text{ if } i=j \\
+            \gamma (i-1) \text{ if } j = i+1.
+          \end{cases}
+\end{align}
+We consider the system to have two parameters, $\theta=[\gamma,K]$. The sensitivity of $\Av$ to $\gamma$ is given by
+\begin{align}
+  \frac{\partial A_{ji}}{\partial \gamma} = \begin{cases}
+             i  \text{ if } i=j \\
+            (i-1) \text{ if } j = i+1.
+          \end{cases}
+\end{align}
+To impose dependence of the chain on ... we must ...
+
+
+
+
+
 \end{document}
